@@ -102,3 +102,10 @@ gradle clean remote_test -DdeviceHost=remote
 <p align="center">
 <img width="70%" title="Telegram Notifications" src="media/telegram-notification.png">
 </p>
+
+## Видео примера запуска тестов
+
+К каждому тесту в отчете прилагается видео прогона.
+<p align="center">
+  <img title="Selenoid Video" src="media/video-mobile.gif">
+</p>
