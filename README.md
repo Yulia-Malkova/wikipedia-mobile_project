@@ -4,7 +4,7 @@
 
 # <p align="center"> Проект по автоматизации тестовых сценариев для  мобильного приложения <a href="https://github.com/wikimedia/apps-android-wikipedia/">Wikipedia</a></h1> <p align="center">
 
-## 🔨 Технологии и инструменты:
+## Технологии и инструменты:
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img width="6%" title="IntelliJ IDEA" src="media/Intelij_IDEA.svg"></a>
 <a href="https://www.java.com/"><img width="6%" title="Java" src="media/Java.svg"></a>
@@ -26,7 +26,7 @@
 - Для удаленного запуска реализована джоба в Jenkins с формированием Allure-отчета и отправкой результатов в <code>Telegram</code> при помощи бота.
 - Осуществлена интеграция с <code>Allure TestOps </code> и <code>Jira</code>.
 
-## ![##46C3D3](https://placehold.co/15x15/46C3D3/46C3D3.png) Реализованные проверки
+## Реализованные проверки
 ### При запуске локально (local) на эмуляторе:
 
 - Проверка 4 страниц онбоардинга
@@ -42,7 +42,7 @@
 - Проверка отображения карточки "In the news" на главной странице
 - Проверка открытия статьи через карточку Featured Article на главной странице
   
-## ![##46C3D3](https://placehold.co/15x15/46C3D3/46C3D3.png) Запуск автотестов
+## Запуск автотестов
 
 ### Запуск локально (local) на эмуляторе:
 
@@ -59,12 +59,12 @@ gradle clean remote_test -DdeviceHost=remote
 > Для запуска необходимо нажать "Build now"
 
 
-## ![##46C3D3](https://placehold.co/15x15/46C3D3/46C3D3.png) Сборка в [Jenkins](https://jenkins.autotests.cloud/job/021-Yulia_Malkova-mobile-project/)
+## Сборка в [Jenkins](https://jenkins.autotests.cloud/job/021-Yulia_Malkova-mobile-project/)
 <p align="center">
 <img title="Jenkins Build" src="media/jenkins.png">
 </p>
 
-## ![##46C3D3](https://placehold.co/15x15/46C3D3/46C3D3.png) Пример [Allure-отчета](https://jenkins.autotests.cloud/job/021-Yulia_Malkova-mobile-project/allure/)
+## Пример [Allure-отчета](https://jenkins.autotests.cloud/job/021-Yulia_Malkova-mobile-project/allure/)
 ### Overview
 
 <p align="center">
@@ -77,7 +77,7 @@ gradle clean remote_test -DdeviceHost=remote
 <img title="Test Results in Alure" src="media/allure-test.png">
 </p>
 
-## ![##46C3D3](https://placehold.co/15x15/46C3D3/46C3D3.png) Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3778/dashboards)
+## Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/3778/dashboards)
 
 Выполнена интеграция сборки <code>Jenkins</code> с <code>Allure TestOps</code>.
 Результат выполнения автотестов отображается в <code>Allure TestOps</code>
@@ -87,7 +87,7 @@ gradle clean remote_test -DdeviceHost=remote
 <img title="Allure TestOps DashBoard" src="media/allure-testops-integration.png">
 </p>
 
-## ![##46C3D3](https://placehold.co/15x15/46C3D3/46C3D3.png) Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-950)
+## Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-950)
 
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается информация, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 
@@ -95,7 +95,7 @@ gradle clean remote_test -DdeviceHost=remote
 <img title="Jira Task" src="media/jira-integration.png">
 </p>
 
-## ![##46C3D3](https://placehold.co/15x15/46C3D3/46C3D3.png) Уведомления в Telegram с использованием бота
+## Уведомления в Telegram с использованием бота
 
 После завершения сборки, бот созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
