@@ -24,13 +24,30 @@ public class SearchTests extends TestBase {
     DataExtractor dataExtractor = new DataExtractor();
 
     @Test
-    @DisplayName("Поиск выдает релевантные результаты")
+    @DisplayName("Поиск выдает релевантные результаты при удаленном запуске")
     @Tag("remote")
+    @Feature("Поиск")
+    @Owner("jmalkova")
+    void successfulSearchRemoteTest() {
+        step("Переходим в строку поиска и вводим релевантное значение", () ->
+            mainPage
+                    .clickOnSearchPlaceholder()
+                    .enterValueForSearch(variables.randomSearchValue));
+
+        step("Проверяем, что походящие статьи отображаются в списке", () ->
+                searchResultPage
+                        .checkSearchResult());
+    }
+
+    @Test
+    @DisplayName("Поиск выдает релевантные результаты при локальнои запуске")
     @Tag("local")
     @Feature("Поиск")
     @Owner("jmalkova")
-    void successfulSearchTest() {
+    void successfulSearchLocalTest() {
         step("Переходим в строку поиска и вводим релевантное значение", () -> {
+            onboardingPage
+                    .clickOnSkipButton();
             mainPage
                     .clickOnSearchPlaceholder()
                     .enterValueForSearch(variables.randomSearchValue);
@@ -69,13 +86,11 @@ public class SearchTests extends TestBase {
     @Owner("jmalkova")
     @Tag("remote")
     void errorWhenOpeningArticleTest() {
-        step("Переходим в строку поиска и вводим релевантное значение", () -> {
-            onboardingPage
-                    .clickOnSkipButton();
+        step("Переходим в строку поиска и вводим релевантное значение", () ->
             mainPage
                     .clickOnSearchPlaceholder()
-                    .enterValueForSearch(variables.randomSearchValue);
-        });
+                    .enterValueForSearch(variables.randomSearchValue)
+        );
 
         step("Кликаем на первую статью из списка", () ->
                 searchResultPage
